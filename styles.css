@@ -77,6 +77,9 @@ h2 { margin: 0; font-size: 1.2rem; font-weight: 650; letter-spacing: .05em; }
 .section-en { margin-left: auto; font-size: .75rem; letter-spacing: .1em; color: var(--muted); }
 .about-text { margin: 0; color: #455166; line-height: 2; }
 .about-text strong { color: var(--ink); font-weight: 600; }
+.personal-intro { margin-top: 1.4rem; }
+.personal-intro h3 { color: var(--accent); font-size: .9375rem; }
+.personal-intro p { margin: .45rem 0 0; color: #455166; line-height: 2; }
 .education { display: flex; flex-wrap: wrap; align-items: baseline; gap: .55rem 1rem; padding: .9rem 1rem; margin-top: 1.3rem; background: #f6f8fc; font-size: .875rem; }
 .education-label, .education > span:last-child { color: var(--muted); }
 .education strong { font-weight: 600; }
@@ -111,6 +114,10 @@ h3 { font-size: 1rem; font-weight: 600; margin: 0; line-height: 1.8; }
 .skills-list > div { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 1rem; margin-bottom: .9rem; }
 .skills-list dt { font-weight: 600; font-size: .9375rem; }
 .skills-list dd { margin: 0; color: #455166; }
+.closing-note { margin: 2.75rem 0 2rem; padding-top: 1.65rem; border-top: 2px solid var(--accent); }
+.closing-label { margin: 0 0 .55rem; color: var(--muted); font-size: .875rem; }
+.closing-note h2 { color: var(--accent); font-size: 1.45rem; letter-spacing: 0; }
+.closing-note > p:last-child { margin: .9rem 0 0; color: #455166; line-height: 2; }
 .footer { display: flex; justify-content: space-between; gap: 1rem; margin: 0 3.75rem; padding: 1.3rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .8125rem; }
 .print-contact { display: none; }
 @media (min-width: 901px) { .sidebar-note { position: sticky; top: 21rem; } }
@@ -204,6 +211,11 @@ h3 { font-size: 1rem; font-weight: 600; margin: 0; line-height: 1.8; }
   h2 { font-size: 12pt; }
   h3 { font-size: 10pt; }
   .about-text { line-height: 1.8; }
+  .personal-intro { margin-top: .7rem; break-inside: avoid; }
+  .personal-intro p { line-height: 1.8; }
+  .closing-note { margin: 1.2rem 0 0; padding-top: .7rem; break-inside: avoid; }
+  .closing-note h2 { font-size: 12pt; }
+  .closing-note > p:last-child { margin-top: .4rem; line-height: 1.8; }
   .education { margin-top: .6rem; padding: .4rem .6rem; background: none; border: 1px solid var(--line); }
   .project { padding: .7rem 0; break-inside: avoid; }
   .item-meta { margin: .15rem 0 .3rem; }
