@@ -4,6 +4,7 @@
 
 **上海杉达学院 · 计算机科学与技术 · 大二在读 · 19 岁**<br>
 **联系电话：** 18930416859<br>
+**电子邮箱：** [1668608622@qq.com](mailto:1668608622@qq.com) / [wujunzhu86@gmail.com](mailto:wujunzhu86@gmail.com)<br>
 **技术与实践方向：** 鸿蒙应用开发、程序设计、大语言模型评估<br>
 **GitHub：** [github.com/wujunzhu0802](https://github.com/wujunzhu0802)
 
