@@ -33,6 +33,11 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outli
 .masthead-meta { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: .7rem; border-bottom: 1px solid var(--ink); font-size: .75rem; letter-spacing: .07em; }
 .masthead-meta span:first-child { font-weight: 600; }
 .masthead-wordmark { display: block; width: fit-content; padding: 1.1rem 0 1.25rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 3.6vw, 3rem); font-weight: 500; line-height: 1.2; letter-spacing: -.035em; text-align: left; white-space: nowrap; }
+.masthead-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.header-github { display: grid; gap: .2rem; text-align: right; }
+.header-github>span { font-size: .75rem; color: var(--muted); letter-spacing: .12em; }
+.header-github strong { font-size: .875rem; font-weight: 500; }
+.header-github:hover strong { color: var(--accent); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); padding: .8rem 0; }
 .header-inner nav { display: flex; flex-wrap: wrap; gap: 2.3rem; font-size: .875rem; }
 .header-inner a:hover { color: var(--accent); }
@@ -40,10 +45,10 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outli
 .resume-link span { margin-left: .65rem; }
 
 /* Cover story: a clear introduction and a compact table of contents. */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) 280px; align-items: center; gap: 4.2rem; padding-top: 3.5rem; padding-bottom: 3.5rem; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 280px; align-items: center; gap: 3.2rem; padding-top: 2.25rem; padding-bottom: 2.25rem; }
 .hero h1 { font-family: var(--serif); font-size: clamp(2.2rem, 4.55vw, 3.8rem); font-weight: 600; line-height: 1.4; letter-spacing: -.035em; margin-top: .85rem; }
 .hero h1 em { font-style: normal; color: var(--accent); }
-.hero-intro { max-width: 37rem; margin-top: 1.5rem; font-size: 1rem; line-height: 2; color: #50504f; }
+.hero-intro { max-width: 37rem; margin-top: 1.15rem; font-size: 1rem; line-height: 2; color: #50504f; }
 .hero-intro strong { color: var(--ink); font-weight: 600; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-top: 1.5rem; }
 .button { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.6rem; padding: .65rem 1rem; font-size: .875rem; line-height: 1.8; transition: color .18s, background .18s; }
@@ -64,13 +69,24 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outli
 .index-note { margin-top: .5rem; font-family: var(--serif); font-size: .8125rem; color: var(--muted); }
 .focus-strip { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.3rem; padding-top: .8rem; padding-bottom: .8rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--ink); font-size: .8125rem; color: var(--muted); }
 
-.section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+.work-overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; padding-top: 1.5rem; padding-bottom: .75rem; }
+.work-overview>a { min-width: 0; border-bottom: 1px solid var(--line); padding-bottom: 1.15rem; }
+.overview-label { display: block; color: var(--accent); font-size: .75rem; letter-spacing: .1em; margin-bottom: .35rem; }
+.work-overview strong { display: block; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; line-height: 1.6; }
+.work-overview p { font-size: .875rem; color: var(--muted); line-height: 1.9; margin-top: .4rem; }
+.overview-link { display: inline-block; font-size: .8125rem; margin-top: .65rem; }
+.work-overview a:hover strong, .work-overview a:hover .overview-link { color: var(--accent); }
+.section { padding-top: 3rem; padding-bottom: 3rem; }
 h2 { font-family: var(--serif); font-size: 2.7rem; line-height: 1.45; font-weight: 600; letter-spacing: -.025em; }
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; padding-bottom: 1.5rem; margin-bottom: 1.8rem; border-bottom: 2px solid var(--ink); }
 .section-heading h2, .section-side h2 { margin-top: .6rem; }
 .section-heading>p { font-size: .9375rem; line-height: 1.9; color: var(--muted); }
 .about-section { display: grid; grid-template-columns: 1fr 1.8fr; gap: 4rem; }
 .section-caption { font-family: Georgia, serif; font-style: italic; font-size: 2rem; line-height: 1.3; margin-top: 1.7rem; color: #858580; }
+.profile-facts { margin: 1.4rem 0 0; }
+.profile-facts>div { display: grid; grid-template-columns: 3.8rem minmax(0, 1fr); gap: .65rem; padding: .65rem 0; border-bottom: 1px solid var(--line); font-size: .875rem; }
+.profile-facts dt { color: var(--muted); }
+.profile-facts dd { margin: 0; }
 .about-content>p { font-size: 1rem; color: #50504f; line-height: 2.05; margin-bottom: 1rem; }
 .about-content .lead { font-family: var(--serif); color: var(--ink); font-size: 1.45rem; font-weight: 500; line-height: 1.8; margin-bottom: 1.4rem; }
 .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding-top: 1.4rem; margin-top: 1.6rem; border-top: 1px solid var(--line); }
@@ -94,6 +110,19 @@ h2 { font-family: var(--serif); font-size: 2.7rem; line-height: 1.45; font-weigh
 .featured-description>p { font-size: 1.0625rem; color: #50504f; line-height: 2; margin-bottom: 1.3rem; }
 .project-tag { font-size: .8125rem; color: var(--muted); display: inline-block; margin-right: 1rem; padding-bottom: .15rem; border-bottom: 1px solid #aaa9a4; }
 
+.github-section { border-bottom: 1px solid var(--line); }
+.github-profile-link { font-size: .9375rem; border-bottom: 1px solid var(--ink); padding-bottom: .25rem; }
+.github-profile-link:hover { color: var(--accent); border-color: var(--accent); }
+.repository { min-width: 0; display: grid; grid-template-columns: .9fr 1.1fr; gap: 1rem 3rem; }
+.repository-topline { grid-column: 1/-1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; font-size: .75rem; color: var(--muted); letter-spacing: .06em; }
+.repository-topline>span:first-child { color: var(--accent); }
+.repository h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; line-height: 1.7; }
+.repository h3 a:hover { color: var(--accent); }
+.repository h3 a>span { font-family: var(--sans); font-size: 1rem; }
+.repository-name { font-family: Consolas, "Courier New", monospace; font-size: .875rem; color: var(--muted); overflow-wrap: anywhere; margin-top: .3rem; }
+.repository-description p { line-height: 1.95; color: #53534f; }
+.repository-link { display: inline-block; margin-top: 1rem; padding-bottom: .2rem; border-bottom: 1px solid var(--ink); font-size: .875rem; }
+.repository-link:hover { color: var(--accent); border-color: var(--accent); }
 .research-card { display: grid; grid-template-columns: 235px minmax(0, 1fr); gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
 .research-aside { display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; font-size: .875rem; }
 .research-abbr { font-family: Georgia, serif; font-size: 5.2rem; letter-spacing: -.065em; font-weight: 600; line-height: 1.1; }
@@ -179,6 +208,11 @@ h2 { font-family: var(--serif); font-size: 2.7rem; line-height: 1.45; font-weigh
   .section { padding-top: 3rem; padding-bottom: 3rem; }
   h2 { font-size: 2rem; }
   .about-section { grid-template-columns: 1fr; gap: 1.5rem; }
+  .profile-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.5rem; margin-top: 1rem; }
+  .work-overview { gap: 1.3rem; }
+  .work-overview strong { font-size: 1.1rem; }
+  .work-overview p br { display: none; }
+  .repository { column-gap: 2rem; }
   .section-caption { display: none; }
   .about-content .lead { font-size: 1.3rem; }
   .section-heading { margin-bottom: 1.5rem; padding-bottom: 1.2rem; align-items: flex-start; }
@@ -207,6 +241,16 @@ h2 { font-family: var(--serif); font-size: 2.7rem; line-height: 1.45; font-weigh
   .site-header { padding-top: .75rem; }
   .masthead-meta { font-size: .75rem; letter-spacing: 0; }
   .masthead-wordmark { padding: 1.05rem 0; }
+  .header-github strong { font-size: .75rem; }
+  .header-github>span { font-size: .75rem; }
+  .work-overview { grid-template-columns: 1fr; gap: 1rem; padding-top: 1.2rem; }
+  .work-overview>a { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: .75rem; padding-bottom: 1rem; }
+  .work-overview strong { font-size: 1.2rem; grid-column: 1/-1; }
+  .overview-label { grid-column: 1/-1; }
+  .work-overview p { grid-column: 1/-1; }
+  .overview-link { grid-column: 1/-1; margin-top: .4rem; }
+  .profile-facts { grid-template-columns: 1fr; }
+  .repository { grid-template-columns: 1fr; gap: 1rem; }
   .header-inner { flex-wrap: wrap; gap: .7rem; padding: .7rem 0; }
   .header-inner nav { flex: 1 1 100%; justify-content: space-between; gap: .5rem; font-size: .875rem; }
   .resume-link { font-size: .8125rem; margin-left: auto; }
@@ -260,6 +304,7 @@ h2 { font-family: var(--serif); font-size: 2.7rem; line-height: 1.45; font-weigh
   :root { font-size: 10pt; background: #fff; }
   .wrap { max-width: none; padding-left: 0; padding-right: 0; }
   .masthead-meta, .header-inner, .cover-index, .hero-actions, .focus-strip, .contact-display, .site-footer { display: none; }
+  .header-github, .work-overview { display: none; }
   .masthead-wordmark { font-size: 36pt; text-align: left; padding: 0 0 1rem; }
   .hero { display: block; padding: 1rem 0; border-top: 1pt solid #171717; }
   .hero h1 { font-size: 22pt; }
