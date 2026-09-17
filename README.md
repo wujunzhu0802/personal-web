@@ -1,4 +1,4 @@
-# 吴君竹 · 个人简历
+# 吴君竹 · 个人网站与简历
 
 <img src="./assets/portrait.jpg" alt="吴君竹的个人照片" width="108" align="right" />
 
@@ -10,6 +10,7 @@
 
 ## 阅读简历
 
+- [个人网站](https://wujunzhu-personal.zhuxinrong1981.chatgpt.site)：个人介绍、开发项目、科研与荣誉、联系方式；Sites 当前默认仅所有者可见。
 - [完整个人简历](./resume.md)
 - [个人简介：正式版、精简版与自我介绍](./bio.md)
 - [网页版源文件](./index.html)：下载仓库后，用浏览器打开即可阅读；点击「打印 / 保存 PDF」可导出。
@@ -25,13 +26,19 @@
 
 ## 本地使用
 
-网页使用原生 HTML、CSS 和 JavaScript，无需安装依赖。直接打开 `index.html` 即可使用，也可以在仓库目录运行：
+简历页与个人网站使用原生 HTML、CSS 和 JavaScript，无需安装依赖。直接打开 `index.html` 可阅读原有简历；个人网站运行以下命令构建后预览：
+
+```bash
+npm run build
+```
+
+再在仓库目录运行：
 
 ```bash
 python -m http.server 8000
 ```
 
-随后访问 <http://localhost:8000>。
+随后访问 <http://localhost:8000/dist/> 查看个人网站，访问 <http://localhost:8000> 查看原有简历。个人网站中的「完整简历」会打开同一构建内的简历页。
 
 ## 内容维护
 
@@ -41,6 +48,10 @@ python -m http.server 8000
 - `resume.md`：适合阅读、复制和投递整理的完整文字简历。
 - `bio.md`：不同长度的个人简介。
 - `assets/portrait.jpg`：个人照片。
+- `personal-site/`：独立的个人网站首页和样式。
+- `scripts/build-site.mjs`：构建个人网站，自动带入最新简历、简介和照片。
+- `dist/`：构建结果，不纳入 Git。
+- `.openai/hosting.json`：个人网站的 Sites 项目标识及静态输出配置。
 
 修改经历后，请同步更新网页和文字版本。后续可补充预计毕业时间、公开邮箱、App 名称与商店链接、项目技术栈和具体职责。论文状态在收到录用结果后再更新；本仓库当前表述为「已投稿」。
 
